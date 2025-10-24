@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-900 text-white">
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#home" class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+          DevPortfolio
+        </a>
+        <nav class="hidden md:flex items-center space-x-2">
+          <a href="#home" class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white transition-colors duration-300">Inicio</a>
+          <a href="#projects" class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white transition-colors duration-300">Proyectos</a>
+          <a href="#skills" class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white transition-colors duration-300">Habilidades</a>
+          <a href="#contact" class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white transition-colors duration-300">Contacto</a>
+        </nav>
+        <button id="menu-button" class="md:hidden text-slate-300 hover:text-white">
+          <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden bg-slate-900/90 backdrop-blur-sm">
+        <nav class="flex flex-col items-center py-4">
+          <a href="#home" class="py-3 w-full text-center px-4 text-sm font-medium text-slate-300 hover:text-white transition-colors duration-300">Inicio</a>
+          <a href="#projects" class="py-3 w-full text-center px-4 text-sm font-medium text-slate-300 hover:text-white transition-colors duration-300">Proyectos</a>
+          <a href="#skills" class="py-3 w-full text-center px-4 text-sm font-medium text-slate-300 hover:text-white transition-colors duration-300">Habilidades</a>
+          <a href="#contact" class="py-3 w-full text-center px-4 text-sm font-medium text-slate-300 hover:text-white transition-colors duration-300">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/50 via-indigo-900/50 to-purple-900/50"></div>
+        <div class="absolute top-0 left-0 w-full h-full bg-slate-900 opacity-60"></div>
+        <div class="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-purple-600/20 rounded-full filter blur-3xl animate-pulse"></div>
+        <div class="absolute -bottom-1/4 -left-1/4 w-1/2 h-1/2 bg-blue-600/20 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
+
+        <div class="container mx-auto px-6 text-center z-10">
+          <div class="flex flex-col items-center">
+              <img src="https://picsum.photos/seed/developer/150/150" alt="Developer Avatar" class="w-40 h-40 rounded-full border-4 border-purple-500/50 shadow-lg mb-6">
+              <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+                Hola, soy un Desarrollador Web
+              </h1>
+              <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto mb-8">
+                Me enfoco en crear experiencias digitales funcionales, atractivas y que resuelven problemas reales. Mi pasión es transformar ideas en código limpio y eficiente.
+              </p>
+              <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#projects" class="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-full shadow-lg hover:scale-105 transform transition-transform duration-300">
+                  Ver Proyectos
+                </a>
+                <a href="#contact" class="px-8 py-3 bg-slate-700/50 text-white font-semibold rounded-full border border-slate-600 hover:bg-slate-700 transform transition-colors duration-300">
+                  Contáctame
+                </a>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="py-20 bg-slate-900">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 relative">
+            Mis Proyectos
+            <span class="block w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mt-4 rounded"></span>
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project Card 1 -->
+            <div class="bg-slate-800/50 rounded-lg overflow-hidden shadow-lg group transform hover:-translate-y-2 transition-transform duration-300 border border-slate-700">
+              <div class="relative overflow-hidden">
+                <img src="https://picsum.photos/seed/project1/500/300" alt="E-commerce Platform" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="absolute inset-0 bg-black/20"></div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-2 text-white">E-commerce Restaurante</h3>
+                <p class="text-slate-400 mb-4 text-sm">Una plataforma de comercio electrónico completa con carrito de compras, pasarela de pago y panel de administración.</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs font-semibold rounded-full">React</span>
+                  <span class="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs font-semibold rounded-full">Node.js</span>
+                  <span class="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs font-semibold rounded-full">Express</span>
+                </div>
+                <div class="flex items-center space-x-4 mt-auto">
+                  <a href="#" target="_blank" rel="noopener noreferrer" class="flex items-center text-slate-300 hover:text-purple-400 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    <span>Demo</span>
+                  </a>
+                  <a href="#" target="_blank" rel="noopener noreferrer" class="flex items-center text-slate-300 hover:text-purple-400 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    <span>Código</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Project Card 2 -->
+            <div class="bg-slate-800/50 rounded-lg overflow-hidden shadow-lg group transform hover:-translate-y-2 transition-transform duration-300 border border-slate-700">
+                <div class="relative overflow-hidden">
+                  <img src="https://picsum.photos/seed/project2/500/300" alt="Task Management App" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                  <div class="absolute inset-0 bg-black/20"></div>
+                </div>
+                <div class="p-6">
+                  <h3 class="text-xl font-bold mb-2 text-white">EchoLinks</h3>
+                  <p class="text-slate-400 mb-4 text-sm">Aplicación para gestion de Recursos Humanos</p>
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs font-semibold rounded-full">PHP</span>
+                  </div>
+                  <div class="flex items-center space-x-4 mt-auto">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="flex items-center text-slate-300 hover:text-purple-400 transition-colors duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                      <span>Demo</span>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="flex items-center text-slate-300 hover:text-purple-400 transition-colors duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                      <span>Código</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            <!-- Project Card 3 -->
+            <div class="bg-slate-800/50 rounded-lg overflow-hidden shadow-lg group transform hover:-translate-y-2 transition-transform duration-300 border border-slate-700">
+                <div class="relative overflow-hidden">
+                  <img src="https://picsum.photos/seed/project3/500/300" alt="Portfolio Website Template" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                  <div class="absolute inset-0 bg-black/20"></div>
+                </div>
+                <div class="p-6">
+                  <h3 class="text-xl font-bold mb-2 text-white">Portfolio Website Template</h3>
+                  <p class="text-slate-400 mb-4 text-sm">Una plantilla de portafolio personalizable y de código abierto, diseñada para ser rápida, responsiva y fácil de desplegar.</p>
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs font-semibold rounded-full">Next.js</span>
+                    <span class="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs font-semibold rounded-full">TypeScript</span>
+                    <span class="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs font-semibold rounded-full">Vercel</span>
+                  </div>
+                  <div class="flex items-center space-x-4 mt-auto">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="flex items-center text-slate-300 hover:text-purple-400 transition-colors duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                      <span>Demo</span>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="flex items-center text-slate-300 hover:text-purple-400 transition-colors duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                      <span>Código</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="py-20 bg-slate-900/70 backdrop-blur-sm">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 relative">
+            Mis Habilidades
+            <span class="block w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mt-4 rounded"></span>
+          </h2>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
+                    <h3 class="text-xl font-bold text-white mb-4">Frontend</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <div class="bg-slate-700 px-4 py-2 rounded-md text-slate-300 font-medium text-sm hover:bg-purple-600/50 hover:text-white transition-all duration-300 cursor-default">HTML5</div>
+                        <div class="bg-slate-700 px-4 py-2 rounded-md text-slate-300 font-medium text-sm hover:bg-purple-600/50 hover:text-white transition-all duration-300 cursor-default">CSS3</div>
+                        <div class="bg-slate-700 px-4 py-2 rounded-md text-slate-300 font-medium text-sm hover:bg-purple-600/50 hover:text-white transition-all duration-300 cursor-default">JavaScript (ES6+)</div>
+                        <div class="bg-slate-700 px-4 py-2 rounded-md text-slate-300 font-medium text-sm hover:bg-purple-600/50 hover:text-white transition-all duration-300 cursor-default">TypeScript</div>
+                        <div class="bg-slate-700 px-4 py-2 rounded-md text-slate-300 font-medium text-sm hover:bg-purple-600/50 hover:text-white transition-all duration-300 cursor-default">React</div>
+                        <div class="bg-slate-700 px-4 py-2 rounded-md text-slate-300 font-medium text-sm hover:bg-purple-600/50 hover:text-white transition-all duration-300 cursor-default">Tailwind CSS</div>
+                    </div>
+                </div>
+                <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
+                    <h3 class="text-xl font-bold text-white mb-4">Backend</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <div class="bg-slate-700 px-4 py-2 rounded-md text-slate-300 font-medium text-sm hover:bg-purple-600/50 hover:text-white transition-all duration-300 cursor-default">Node.js</div>
+                        <div class="bg-slate-700 px-4 py-2 rounded-md text-slate-300 font-medium text-sm hover:bg-purple-600/50 hover:text-white transition-all duration-300 cursor-default">Express</div>
+                        <div class="bg-slate-700 px-4 py-2 rounded-md text-slate-300 font-medium text-sm hover:bg-purple-600/50 hover:text-white transition-all duration-300 cursor-default">REST APIs</div>
+                    </div>
+                </div>
+                <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
+                    <h3 class="text-xl font-bold text-white mb-4">Tools</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <div class="bg-slate-700 px-4 py-2 rounded-md text-slate-300 font-medium text-sm hover:bg-purple-600/50 hover:text-white transition-all duration-300 cursor-default">Git & GitHub</div>
+                        <div class="bg-slate-700 px-4 py-2 rounded-md text-slate-300 font-medium text-sm hover:bg-purple-600/50 hover:text-white transition-all duration-300 cursor-default">Figma</div>
+                        <div class="bg-slate-700 px-4 py-2 rounded-md text-slate-300 font-medium text-sm hover:bg-purple-600/50 hover:text-white transition-all duration-300 cursor-default">Trello</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
+                    <h3 class="text-xl font-bold text-white mb-4">Habilidades Blandas</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <div class="bg-slate-700 px-4 py-2 rounded-md text-slate-300 font-medium text-sm hover:bg-purple-600/50 hover:text-white transition-all duration-300 cursor-default">Resolución de Problemas</div>
+                        <div class="bg-slate-700 px-4 py-2 rounded-md text-slate-300 font-medium text-sm hover:bg-purple-600/50 hover:text-white transition-all duration-300 cursor-default">Trabajo en Equipo</div>
+                        <div class="bg-slate-700 px-4 py-2 rounded-md text-slate-300 font-medium text-sm hover:bg-purple-600/50 hover:text-white transition-all duration-300 cursor-default">Aprendizaje Continuo</div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="py-20 bg-slate-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 relative">
+                Contáctame
+                <span class="block w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mt-4 rounded"></span>
+            </h2>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl font-bold text-white mb-4">Hablemos de tu proyecto</h3>
+                    <p class="text-slate-400 mb-8">
+                        Estoy disponible para oportunidades freelance o roles de tiempo completo. Si tienes alguna pregunta o simplemente quieres saludar, no dudes en contactarme.
+                    </p>
+                    <div class="flex justify-center md:justify-start space-x-6">
+                        <a href="#" class="text-slate-400 hover:text-purple-400 transition-colors duration-300">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        </a>
+                        <a href="https://github.com/CoGrandis" class="text-slate-400 hover:text-purple-400 transition-colors duration-300">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </a>
+                        <a href="mailto:grandisconstanza@gmail.com" class="text-slate-400 hover:text-purple-400 transition-colors duration-300">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+              <form id="contact-form" class="w-full space-y-6 bg-slate-800/50 p-8 rounded-lg border border-slate-700">
+                <div>
+                  <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Nombre</label>
+                  <input type="text" name="name" id="name" required class="w-full bg-slate-700 border border-slate-600 text-white rounded-md px-4 py-2 focus:ring-2 focus:ring-purple-500 focus:outline-none transition" placeholder="Tu Nombre">
+                </div>
+                <div>
+                  <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email</label>
+                  <input type="email" name="email" id="email" required class="w-full bg-slate-700 border border-slate-600 text-white rounded-md px-4 py-2 focus:ring-2 focus:ring-purple-500 focus:outline-none transition" placeholder="tu@email.com">
+                </div>
+                <div>
+                  <label for="message" class="block text-sm font-medium text-slate-300 mb-2">Mensaje</label>
+                  <textarea name="message" id="message" rows="4" required class="w-full bg-slate-700 border border-slate-600 text-white rounded-md px-4 py-2 focus:ring-2 focus:ring-purple-500 focus:outline-none transition resize-none" placeholder="Tu mensaje..."></textarea>
+                </div>
+                <button type="submit" class="w-full px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-full shadow-lg hover:scale-105 transform transition-transform duration-300">
+                  Enviar Mensaje
+                </button>
+              </form>
+            </div>
+          </div>
+      </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-slate-900/50 border-t border-slate-800 py-6">
+      <div class="container mx-auto px-6 text-center text-slate-500 text-sm">
+        <p>&copy; 2024 Mi Portfolio. Todos los derechos reservados.</p>
+        <p class="mt-2">Diseñado y construido con ❤️</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
